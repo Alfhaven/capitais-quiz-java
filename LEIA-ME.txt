@@ -1,0 +1,42 @@
+ENTREGA - ETAPA 6 DO PROJETO INTEGRADOR
+=========================================
+
+Conteúdo deste pacote:
+
+1) QuizCapitais-Refatorado/
+   Novo projeto Java NetBeans (Maven) com o código refatorado:
+   separação de responsabilidades (SOLID), interfaces de repositório,
+   camada de serviço, testes manuais em quiz.teste.TesteMain.
+   Inclui o README.md já publicado no repositório GitHub.
+
+2) Relatorio/Relatorio_Etapa6.docx
+   Relatório com os princípios SOLID aplicados, refatorações
+   realizadas, padrão de projeto utilizado e, na seção 4, as
+   evidências reais do repositório GitHub
+   (github.com/Alfhaven/capitais-quiz-java), com prints do
+   repositório, do histórico de commits e do README publicado.
+
+3) Projeto-Desktop-Etapa-Anterior/UC15/
+   Código do projeto desktop concluído na fase anterior do PI
+   (versão completa: LoginForm, CadastroForm, QuizForm, AdminForm,
+   ResultadoQuiz), sem alterações — ponto de partida da refatoração.
+
+4) Documento-de-Projeto/Diagrama-de-Classes-UML.png
+   Diagrama de classes (StarUML) usado no projeto do software desktop,
+   mostrando os pacotes quiz.ui, quiz.app, quiz.sql, quiz.dao e
+   quiz.model.
+
+FALTA VOCÊ FAZER ANTES DE ENVIAR:
+- O repositório github.com/Alfhaven/capitais-quiz-java hoje só tem
+  o README.md. Falta enviar (git push) o código de
+  QuizCapitais-Refatorado/ para esse mesmo repositório, de
+  preferência em 2-3 commits separados (ex.: "estrutura inicial dos
+  services e repositórios", "correção dos bugs encontrados na
+  revisão"), e então tirar um novo print da lista de arquivos no
+  GitHub e colar na seção 4 do relatório, junto com um print do
+  histórico de commits atualizado.
+- Antes desse push: mova a senha do banco (persistence.xml) para
+  variável de ambiente e adicione um .gitignore com "target/".
+- Se você tiver outros artefatos do documento de projeto além do
+  diagrama de classes (casos de uso, diagrama de sequência etc.),
+  coloque-os também na pasta Documento-de-Projeto/.

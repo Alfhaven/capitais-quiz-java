@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+                                 https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+
+    <persistence-unit name="QuizCapitaisPU" transaction-type="RESOURCE_LOCAL">
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Todas as entidades registradas (no projeto desktop original,
+             apenas Usuario estava aqui; Continente, Pais, Estado, Capital
+             e ResultadoQuiz estavam comentados, o que impedia a persistência
+             delas em tempo de execução). -->
+        <class>quiz.model.Usuario</class>
+        <class>quiz.model.Continente</class>
+        <class>quiz.model.Pais</class>
+        <class>quiz.model.Estado</class>
+        <class>quiz.model.Capital</class>
+        <class>quiz.model.ResultadoQuiz</class>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver"
+                      value="com.mysql.cj.jdbc.Driver"/>
+
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:mysql://localhost:3306/quiz_capitais?useSSL=false&amp;serverTimezone=UTC"/>
+
+            <property name="jakarta.persistence.jdbc.user"
+                      value="root"/>
+
+            <!-- Recomendação registrada no relatório: mover usuário/senha
+                 do banco para variáveis de ambiente antes de publicar o
+                 repositório. Mantido literal aqui apenas para não quebrar
+                 o setup local do ambiente acadêmico. -->
+            <property name="jakarta.persistence.jdbc.password"
+                      value="147356"/>
+
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.MySQLDialect"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+
+    </persistence-unit>
+</persistence>
